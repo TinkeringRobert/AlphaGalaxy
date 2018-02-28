@@ -9,9 +9,6 @@ var port;
 module.exports = {
   initialize: function(params)
   {
-    console.log('------------------');
-    console.log(params.mqtt.host);
-    console.log('------------------');
     client = mqtt.connect(params.mqtt.host);
     client.on('connect', function () {
       winston.info('Starting : SerialController');
